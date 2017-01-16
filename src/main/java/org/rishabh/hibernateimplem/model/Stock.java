@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
 
 @Entity
@@ -18,6 +19,19 @@ public class Stock implements java.io.Serializable {
 	String stockCode;
 	String stockName;
 	int stockPrice;
+	@OneToOne
+	StockDetail stockDetail;
+	
+	
+	public StockDetail getStockDetail() {
+		return stockDetail;
+	}
+	public void setStockDetail(StockDetail stockDetail) {
+		this.stockDetail = stockDetail;
+	}
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
 	public int getStockId() {
 		return stockId;
 	}

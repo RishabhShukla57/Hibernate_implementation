@@ -11,6 +11,7 @@ public class Main {
 		Stock stock = new Stock();
 		stock.setStockCode("AMB");
 		stock.setStockName("AMBUJA CEMENT");
+		
 		stock.setStockPrice(923);
 		SessionFactory sessionFactory = HibernateUtil.buildSessionFactory();
 		Session session  =  sessionFactory.openSession();
