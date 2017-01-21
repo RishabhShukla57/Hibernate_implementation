@@ -13,5 +13,6 @@
         <property name="show_sql">true</property>
         <property name="hbm2ddl.auto">create</property> 
         <mapping class="org.rishabh.hibernateimplem.model.Stock"></mapping>
+        <mapping class="org.rishabh.hibernateimplem.model.StockDetail"></mapping>
     </session-factory>
 </hibernate-configuration>

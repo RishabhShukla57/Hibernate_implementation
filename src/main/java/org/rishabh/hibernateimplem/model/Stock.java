@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 
 
@@ -19,13 +20,16 @@ public class Stock implements java.io.Serializable {
 	String stockCode;
 	String stockName;
 	int stockPrice;
+	
 	@OneToOne
+	@JoinColumn(name="stockDetailId")
 	StockDetail stockDetail;
 	
 	
 	public StockDetail getStockDetail() {
 		return stockDetail;
 	}
+	
 	public void setStockDetail(StockDetail stockDetail) {
 		this.stockDetail = stockDetail;
 	}
@@ -50,6 +54,8 @@ public class Stock implements java.io.Serializable {
 	public void setStockName(String stockName) {
 		this.stockName = stockName;
 	}
+	
+	
 	public int getStockPrice() {
 		return stockPrice;
 	}
