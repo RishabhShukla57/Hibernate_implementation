@@ -3,13 +3,15 @@ package org.rishabh.hibernateimplem.inheritence;
 import javax.persistence.DiscriminatorColumn;
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
+import javax.persistence.PrimaryKeyJoinColumn;
 
 //Implementing SINGLE TABLE inheritence strategy
 
 
 
 @Entity
-@DiscriminatorValue(value="CONTRACT_EMPLOYEE")
+/*@PrimaryKeyJoinColumn(name="contract_employee_id",referencedColumnName="id"
+		)*/
 public class ContractEmployee extends Employee {
 	float pay_per_hour;
 	String contracr_period;

@@ -2,10 +2,11 @@ package org.rishabh.hibernateimplem.inheritence;
 
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
+import javax.persistence.PrimaryKeyJoinColumn;
 //Implementing SINGLE TABLE inheritence strategy
 
 @Entity
-@DiscriminatorValue("REGULAR_EMPLOYEE")
+@PrimaryKeyJoinColumn(name="id")
 public class RegularEmployee extends Employee{
 
 	float salary;

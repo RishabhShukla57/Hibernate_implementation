@@ -51,6 +51,7 @@ public class Main {
 		inSession.save(employee);
 		inSession.save(contractEmployee);
 		inSession.save(regularEmployee);
+		inSession.save(regularEmployee1);
 		t.commit();
 		inSession.close();
 		

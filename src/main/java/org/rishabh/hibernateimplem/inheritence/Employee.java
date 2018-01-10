@@ -12,9 +12,7 @@ import javax.persistence.InheritanceType;
 
 import org.hibernate.annotations.GeneratorType;
 
-@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-@DiscriminatorColumn(name="employee_type")
-@DiscriminatorValue(value="EMPLOYEE")
+@Inheritance(strategy = InheritanceType.JOINED)
 @Entity
 public class Employee {
 	@Id
