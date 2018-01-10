@@ -10,8 +10,8 @@ import javax.persistence.PrimaryKeyJoinColumn;
 
 
 @Entity
-/*@PrimaryKeyJoinColumn(name="contract_employee_id",referencedColumnName="id"
-		)*/
+@PrimaryKeyJoinColumn(name="contract_employee_id",referencedColumnName="id"
+		)
 public class ContractEmployee extends Employee {
 	float pay_per_hour;
 	String contracr_period;
