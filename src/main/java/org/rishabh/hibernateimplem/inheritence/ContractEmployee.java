@@ -1,5 +1,8 @@
 package org.rishabh.hibernateimplem.inheritence;
 
+import javax.persistence.AttributeOverride;
+import javax.persistence.AttributeOverrides;
+import javax.persistence.Column;
 import javax.persistence.DiscriminatorColumn;
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
@@ -9,7 +12,11 @@ import javax.persistence.Entity;
 
 
 @Entity
-@DiscriminatorValue(value="CONTRACT_EMPLOYEE")
+/*@AttributeOverrides({
+	@AttributeOverride(column=@Column(name="id"),name="ContractEmployye_ID")
+})*/
+
+@AttributeOverride(column=@Column(name="Name_of_employee"),name="ContractEmployee_id")
 public class ContractEmployee extends Employee {
 	float pay_per_hour;
 	String contracr_period;

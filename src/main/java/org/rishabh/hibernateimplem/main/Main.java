@@ -28,17 +28,9 @@ public class Main {
 		session.getTransaction().commit();
 		sessionFactory.close();
 		*/
+		inheritenceStrategy();
 		
-		
-		
-			inheritenceStrategy();
-		
-		
-		
-		
-		
-	}
-	
+	}	
 	
 	static void inheritenceStrategy()  
 			{
@@ -51,6 +43,7 @@ public class Main {
 		inSession.save(employee);
 		inSession.save(contractEmployee);
 		inSession.save(regularEmployee);
+		inSession.save(regularEmployee1);
 		t.commit();
 		inSession.close();
 		

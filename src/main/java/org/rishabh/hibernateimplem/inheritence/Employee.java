@@ -12,13 +12,12 @@ import javax.persistence.InheritanceType;
 
 import org.hibernate.annotations.GeneratorType;
 
-@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-@DiscriminatorColumn(name="employee_type")
-@DiscriminatorValue(value="EMPLOYEE")
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 @Entity
 public class Employee {
 	@Id
 	@GeneratedValue(strategy= GenerationType.AUTO)
+	@Column(name="id")
 	protected int id;
 	@Column(name="Name_of_employee")
 	protected String name;

@@ -5,7 +5,6 @@ import javax.persistence.Entity;
 //Implementing SINGLE TABLE inheritence strategy
 
 @Entity
-@DiscriminatorValue("REGULAR_EMPLOYEE")
 public class RegularEmployee extends Employee{
 
 	float salary;
