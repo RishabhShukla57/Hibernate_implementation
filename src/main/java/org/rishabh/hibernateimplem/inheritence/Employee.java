@@ -17,7 +17,7 @@ import org.hibernate.annotations.GeneratorType;
 public class Employee {
 	@Id
 	@GeneratedValue(strategy= GenerationType.AUTO)
-	@Column(name="id")
+	//@Column(name="emp_id")
 	protected int id;
 	@Column(name="Name_of_employee")
 	protected String name;
