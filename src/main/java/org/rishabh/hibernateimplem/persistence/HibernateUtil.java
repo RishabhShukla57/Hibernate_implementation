@@ -5,7 +5,7 @@ import org.hibernate.cfg.Configuration;
 
 
 public class HibernateUtil {
-	public static final SessionFactory session = buildSessionFactory();
+	public static final SessionFactory sessionFactory = buildSessionFactory();
 			
 	public static SessionFactory buildSessionFactory(){
 		try{
@@ -16,11 +16,11 @@ public class HibernateUtil {
         }
 	}
 	
-	public static SessionFactory getSession() {
-		return session;
+	public static SessionFactory getSessionFactory() {
+		return sessionFactory;
 	}
 
 	public static void closeComponent(){
-		session.close();
+		sessionFactory.close();
 	}
 }

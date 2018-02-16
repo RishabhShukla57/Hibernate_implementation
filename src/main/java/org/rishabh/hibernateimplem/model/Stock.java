@@ -21,6 +21,12 @@ public class Stock implements java.io.Serializable {
 	String stockName;
 	int stockPrice;
 	
+	public Stock(String stockCode,String stockName,int stockPrice){
+		this.stockCode = stockCode;
+		this.stockName =  stockName;
+		this.stockPrice = stockPrice;
+	}
+	
 	@OneToOne
 	@JoinColumn(name="stockDetailId")
 	StockDetail stockDetail;

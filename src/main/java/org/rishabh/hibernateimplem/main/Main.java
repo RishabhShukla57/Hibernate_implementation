@@ -9,20 +9,22 @@ import org.rishabh.hibernateimplem.persistence.HibernateUtil;
 
 public class Main {
 	public static void main(String [] args){
-		Stock stock = new Stock();
-		stock.setStockCode("AMB");
-		stock.setStockName("AMBUJA CEMENT");
+		oneToOneRelationship();
+	}
+	
+	
+	static void oneToOneRelationship()  
+	{
+		Session inSession = HibernateUtil.getSessionFactory().openSession();
+		org.hibernate.Transaction t =  inSession.beginTransaction();
+		Stock stock = new Stock("AMB","AMBUJA CEMENT",923);
 		StockDetail stockDetail = new StockDetail("Good Share", "Ambuja group");
 		stock.setStockDetail(stockDetail);
-		stock.setStockPrice(923);
-		SessionFactory sessionFactory = HibernateUtil.buildSessionFactory();
-		Session session  =  sessionFactory.openSession();
-		session.beginTransaction();
-		session.save(stockDetail);
-		session.save(stock);
-		session.getTransaction().commit();
-		sessionFactory.close();
-		
-	}
+		inSession.save(stock);
+		inSession.save(stockDetail);
+		t.commit();
+		inSession.close();
+
+}
 
 }
